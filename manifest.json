@@ -14,6 +14,7 @@
                 "*://meet.google.com/*"
             ],
             "js": [
+                "extension-src/finds.js",
                 "extension-src/content-script.js"
             ]
         }
