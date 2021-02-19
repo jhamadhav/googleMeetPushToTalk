@@ -2,8 +2,12 @@ console.log('hi I\'m google meet extension')
 
 document.body.addEventListener('click', () => {
     removeFocus()
-    //console.log('click');
 })
+
+setInterval(() => {
+    let chatIcon = findChatIcon()
+    chatIcon.blur()
+}, 250)
 
 // Buttons
 let micBtn, chatBar, videoBtn;
@@ -25,7 +29,9 @@ const addKeyPressEvent = () => {
 }
 const removeFocus = () => {
     let focusBtn = document.activeElement
-    focusBtn.blur()
+    if (focusBtn == !findChatBar()) {
+        focusBtn.blur()
+    }
 }
 
 const isMicOff = () => {

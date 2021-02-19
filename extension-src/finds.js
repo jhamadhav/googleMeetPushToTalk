@@ -33,15 +33,7 @@ const findCam = () => {
     return res;
 }
 
-const findClose = () => {
-    let res = null;
-    let btn = document.querySelectorAll('[aria-label]');
-    for (let i = 0; i < btn.length; i++) {
-        let element = btn[i];
-        let tt = element.dataset.tooltipId
-        if (tt == 'tt-c10') {
-            res = element;
-        }
-    }
+const findChatIcon = () => {
+    let res = document.getElementsByClassName('uArJ5e UQuaGc kCyAyd QU4Gid foXzLb M9Bg4d')[0]
     return res;
 }
