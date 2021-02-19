@@ -7,7 +7,7 @@ document.body.addEventListener('click', () => {
 setInterval(() => {
     let chatIcon = findChatIcon()
     chatIcon.blur()
-}, 250)
+}, 800)
 
 // Buttons
 let micBtn, chatBar, videoBtn;
@@ -29,7 +29,7 @@ const addKeyPressEvent = () => {
 }
 const removeFocus = () => {
     let focusBtn = document.activeElement
-    if (focusBtn == !findChatBar()) {
+    if (!isChatOnFocus()) {
         focusBtn.blur()
     }
 }
