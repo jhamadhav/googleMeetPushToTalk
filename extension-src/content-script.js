@@ -1,7 +1,7 @@
 console.log('hi I\'m google meet extension')
 
 document.body.addEventListener('click', () => {
-    removeFocus()
+    // removeFocus()
 })
 
 setInterval(() => {
@@ -14,6 +14,7 @@ let micBtn, chatBar, videoBtn;
 
 const addKeyPressEvent = () => {
     document.addEventListener('keydown', (e) => {
+        removeFocus()
         micBtn = findMic()
         if (e.key == ' ' && isMicOff() && !isChatOnFocus()) {
             micBtn.click()
@@ -21,6 +22,7 @@ const addKeyPressEvent = () => {
     });
 
     document.addEventListener('keyup', (e) => {
+        removeFocus()
         micBtn = findMic()
         if (e.key == ' ' && !isMicOff() && !isChatOnFocus()) {
             micBtn.click()
