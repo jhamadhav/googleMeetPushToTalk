@@ -11,12 +11,12 @@ setInterval(() => {
 
 // Buttons
 let micBtn, chatBar, videoBtn;
-
+let key = 17
 const addKeyPressEvent = () => {
     document.addEventListener('keydown', (e) => {
         removeFocus()
         micBtn = findMic()
-        if (e.key == ' ' && isMicOff() && !isChatOnFocus()) {
+        if (e.keyCode == key && isMicOff() && !isChatOnFocus()) {
             micBtn.click()
         }
     });
@@ -24,7 +24,7 @@ const addKeyPressEvent = () => {
     document.addEventListener('keyup', (e) => {
         removeFocus()
         micBtn = findMic()
-        if (e.key == ' ' && !isMicOff() && !isChatOnFocus()) {
+        if (e.keyCode == key && !isMicOff() && !isChatOnFocus()) {
             micBtn.click()
         }
     });
