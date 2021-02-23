@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "Google Meet | Push To Talk",
-    "description": "Unmute mic on press and holding down the spacebar and mute on release, to make google meet session more easy and comfortable to attend.",
-    "version": "1.2",
+    "description": "Unmute mic on press and holding down the <right alt> and mute on release, to make google meet session more easy and comfortable to attend.",
+    "version": "1.2.1",
     "homepage_url": "https://jhamadhav.cpm/googleMeetPushToTalk",
     "permissions": [
         "activeTab",
