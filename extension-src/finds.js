@@ -1,32 +1,33 @@
 const findMic = () => {
     let res = null;
-    let btn = document.querySelectorAll("[data-tooltip]");
+    let btn = document.querySelectorAll("[aria-label]");
 
     for (let i = 0; i < btn.length; i++) {
         let element = btn[i];
-        let tt = element.dataset.tooltip
-        if (tt && (tt.toLowerCase().includes('ctrl + d') || tt.toLowerCase().includes('⌘ + d'))) {
+        let tt = element.attributes["aria-label"]
+        if (tt && (tt.nodeValue.toLocaleLowerCase().includes('ctrl + d') || tt.nodeValue.toLocaleLowerCase().includes('⌘ + d'))) {
             res = element;
-            // console.log(res)
-        } else {
-            res = document.querySelectorAll(".qIiG8c")[0]
         }
     }
+    if (res == null) {
+        res = document.querySelectorAll("button.VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.uaILN.JxICCe.CdgDHf.FTMc0c.N2RpBe.jY9Dbb")[0]
+    }
+    // console.log(res)
     return res;
 }
 
 
 const findCam = () => {
     let res = null;
-    let btn = document.querySelectorAll("[data-tooltip]");
+    let btn = document.querySelectorAll("[aria-label]");
 
     for (let i = 0; i < btn.length; i++) {
         let element = btn[i];
-        let tt = element.dataset.tooltip
-        if (tt && (tt.toLowerCase().includes('ctrl + e') || tt.toLowerCase().includes('⌘ + e'))) {
+        let tt = element.attributes["aria-label"]
+        if (tt && (tt.nodeValue.toLocaleLowerCase().includes('ctrl + e') || tt.nodeValue.toLocaleLowerCase().includes('⌘ + e'))) {
             res = element;
-            // console.log(res)
         }
     }
+    // console.log(res)
     return res;
 }
